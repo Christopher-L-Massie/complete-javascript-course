@@ -1,3 +1,8 @@
+/************************
+* Variables and data types
+***************************/
+
+/*
 var firstName = 'John';
 console.log(firstName);
 
@@ -20,13 +25,90 @@ console.log(job);
 
 job = 'Teacher';
 console.log(job);
+*/
+
+/* |||Variable Naming Rules|||
+-cannot start a variable name with a number
+-'_' AND '$' can be the first character
+-generally use a letter though as first character
+-name variables usefully
+-cannot use reserved keywords(Delete, if, else, etc.)
+-use camelCase notation when naming
+-|BELOW WILL NOT WORK|
+-var 3years = 3;
+*/
+
+/************************
+* Variable mutation and type coercion
+***************************/
+
+var firstName = 'John';
+var age = 28;
 
 
-//cannot start a variable name with a number
-//'_' AND '$' can be the first character
-//generally use a letter though as first character
-//name variables usefully
-//cannot use reserved keywords(Delete, if, else, etc.)
-//use camelCase notation when naming
-//var 3years = 3;
+//Type coercion
+console.log(firstName + ' ' + age);
+
+var job, isMarried;
+job = 'teacher';
+isMarried = false;
+
+console.log(firstName + ' is a ' + age + ' year old ' + job + '. Is he married? ' + isMarried);
+
+//javascript and change types on the fly for you :) how kind of the developers.
+
+// Variable mutation
+age = 'twenty eight';
+job = 'driver';
+
+alert(firstName + ' is a ' + age + ' year old ' + job + '. Is he married? ' + isMarried);
+
+var lastName = prompt('What is his last Name?');
+console.log(firstName + ' ' + lastName);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
