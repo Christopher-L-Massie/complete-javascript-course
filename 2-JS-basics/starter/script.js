@@ -161,6 +161,7 @@ BMI = mass / (height * height)
 
 */
 
+/*
 var massJohn = 92;
 var heightJohn = 1.95;
 
@@ -177,9 +178,52 @@ var isMarkBMIHigherThanJohn = bmiMark > bmiJohn;
 
 //example of escaping the end of string using \
 console.log('is Mark\'s BMI higher than John\'s?', isMarkBMIHigherThanJohn);
+*/
+
+/****************
+* If / else statements
+***************/
+
+var firstName = 'John';
+var civilStatus = 'single';
+
+if (civilStatus === 'married') {
+    console.log(firstName + ' is married!');
+} else {
+    console.log(firstName + ' will hopefully marry soon :)');
+}
+
+var isMarried = true;
+
+if (isMarried) {
+    console.log(firstName + ' is married!');
+} else {
+    console.log(firstName + ' will hopefully marry soon :)');
+}
+
+var massJohn = 92;
+var heightJohn = 1.95;
+
+var massMark = 78;
+var heightMark = 1.69;
+
+var bmiJohn = massJohn / (heightJohn * heightJohn);
+var bmiMark = massMark / (heightMark * heightMark);
+
+if (bmiMark > bmiJohn) {
+    console.log('Mark\'s BMI is higher than John\'s.');
+} else {
+    console.log('John\'s BMI is higher than Mark\'s.');
+}
 
 
+//test
+//console.log(bmiJohn,bmiMark);
 
+//var isMarkBMIHigherThanJohn = bmiMark > bmiJohn;
+
+//example of escaping the end of string using \
+//console.log('is Mark\'s BMI higher than John\'s?', isMarkBMIHigherThanJohn);
 
 
 
