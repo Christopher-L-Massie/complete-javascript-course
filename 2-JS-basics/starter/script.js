@@ -513,7 +513,7 @@ In the end, John would like to have 2 arrays:
 
 */
 
-
+/*
 function calculateTip(bill){
     if (bill < 50){
         return bill * .2;
@@ -534,7 +534,38 @@ var paid = [(calculateTip(billOne)+billOne),(calculateTip(billTwo)+billTwo),(cal
 
 console.log(tips);
 console.log(paid);
+*/
 
+/*********************
+* Objects and properties
+********/
+
+// Object literal syntax
+var john = {
+    firstName: 'John',
+    lastName: 'Smith',
+    birthYear: 1990,
+    family: ['Jane','Mark','Bob','Emily'],
+    job: 'teacher',
+    isMarried: false
+};
+console.log(john);
+console.log(john.firstName);
+console.log(john['lastName']);
+
+var x = 'birthYear';
+console.log(john[x]);
+
+john.job = 'designer';
+john['isMarried'] = true;
+console.log(john);
+
+// new Object() syntax
+var jane = new Object();
+jane.firstName = 'Jane';
+jane.birthYear = 1969;
+jane['lastName'] = 'Smith';
+console.log(jane);
 
 
 
