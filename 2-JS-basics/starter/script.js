@@ -379,6 +379,7 @@ Don't forget to take into account there might be a draw (the same average score)
 5.like before, change the scores to generate different winners, keeping in mind there might be draws.
 */
 
+/*
 var averageJohn = (89 + 120 + 103) / 3;
 var averageMike = (116 + 94 + 123) / 3;
 var averageMary = (97 + 134 + 105) / 3;
@@ -393,11 +394,39 @@ if (averageJohn > averageMike && averageJohn > averageMary){
 } else {
     console.log('There is a tie!');
 }
+*/
+
+/****
+* Functions
+****/
+
+function calculateAge(birthYear){
+    var year = 2018;
+    return year - birthYear;
+}
+
+var ageJohn = calculateAge(1990);
+var ageMike = calculateAge(1948);
+var ageJane = calculateAge(1969);
+
+console.log(ageJohn);
 
 
+function yearsUntilRetirement(year, firstName){
+    var age = calculateAge(year);
+    var retirement = 65 - age;
+    if (retirement > 0){
+        console.log(firstName + ' retires in ' + retirement + ' years.');
+    } else {
+        console.log(firstName + ' is already retired.');
+    }
+    
+    return retirement;  
+}
 
-
-
+yearsUntilRetirement(1990, 'John');
+yearsUntilRetirement(1948, 'Mike');
+yearsUntilRetirement(1969, 'Jane');
 
 
 
