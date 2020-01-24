@@ -184,6 +184,7 @@ console.log('is Mark\'s BMI higher than John\'s?', isMarkBMIHigherThanJohn);
 * If / else statements
 ***************/
 
+/*
 var firstName = 'John';
 var civilStatus = 'single';
 
@@ -215,6 +216,7 @@ if (bmiMark > bmiJohn) {
 } else {
     console.log('John\'s BMI is higher than Mark\'s.');
 }
+*/
 
 
 //test
@@ -225,6 +227,29 @@ if (bmiMark > bmiJohn) {
 //example of escaping the end of string using \
 //console.log('is Mark\'s BMI higher than John\'s?', isMarkBMIHigherThanJohn);
 
+/*************************
+* Boolean logic
+***************/
+
+/*
+AND (&&)
+OR  (||)
+NOT (!)
+
+*/
+
+var firstName = 'John';
+var age = 16;
+
+if (age < 13){
+    console.log(firstName + ' is a boy.');
+} else if (age >= 13 && age < 20) { // between 13 and 20
+    console.log(firstName + ' is a teenager.');
+} else if (age >= 20 && age < 30){
+    console.log(firstName + ' is a young man.');
+} else {
+    console.log(firstName + ' is a man.');
+}
 
 
 
