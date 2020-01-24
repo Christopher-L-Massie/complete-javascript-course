@@ -343,6 +343,7 @@ if (age < 13){
 // falsy values: undefinded, null, 0, ''(empty string), NaN(not a number)
 // truthy values: NOT falsy values
 
+/*
 var height;
 
 height = 23;
@@ -358,7 +359,40 @@ if (height || height === 0) {
 if (height == '23'){
     console.log('The == operator does type coercion!');
 }
+*/
 
+/********************
+* CODING CHALLENGE 2
+*********************/
+
+/*
+John and Mike both play basketball in different teams. In the latest 3 games, John's team scored 89,
+120 and 103 points, while Mike's team scored 116, 94 and 123 points.
+
+1. Calculate the average score for each team
+2. Decide which teams wins in average (highest average score), and print the winner to the console.
+also include the average score inthe output.
+3. Then change the scores to show different winners.
+Don't forget to take into account there might be a draw (the same average score)
+
+4. EXTRA: Mary also plays basketball and her team scored 97, 134, 105 points. like before, log the average winner to the console. HINT: you will need the && operator to make the decision. If you can't solve thie one, just watch the solution it's not problem!
+5.like before, change the scores to generate different winners, keeping in mind there might be draws.
+*/
+
+var averageJohn = (89 + 120 + 103) / 3;
+var averageMike = (116 + 94 + 123) / 3;
+var averageMary = (97 + 134 + 105) / 3;
+console.log(averageJohn, averageMike, averageMary);
+
+if (averageJohn > averageMike && averageJohn > averageMary){
+    console.log('John is the winner with an average of:' + averageJohn);
+} else if (averageMike > averageJohn && averageMike > averageMary){
+    console.log('Mike is the winner with an average of:' + averageMike);
+} else if (averageMary > averageJohn && averageMary > averageMike){
+    console.log('Mary is the winner with an average of:' + averageMary);
+} else {
+    console.log('There is a tie!');
+}
 
 
 
