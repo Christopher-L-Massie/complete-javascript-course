@@ -437,6 +437,7 @@ yearsUntilRetirement(1969, 'Jane');
 //Function declaration
 //function whatDoYouDo(job, firstName){}
 
+/*
 // Function expression
 var whatDoYouDo = function(job, firstName){
     switch(job){
@@ -454,6 +455,178 @@ var whatDoYouDo = function(job, firstName){
 console.log(whatDoYouDo('teacher','John'));
 console.log(whatDoYouDo('designer','Jane'));
 console.log(whatDoYouDo('retired','Mark'));
+*/
+
+/**********
+* Arrays
+**************/
+
+/*
+
+// Initialize new array
+var names = ['John', 'Mark', 'Jane'];
+var years = new Array(1990, 1969, 1948);
+
+console.log(names[2]);
+console.log(names.length);
+
+// Mutate array data
+names[1] = 'Ben';
+names[names.length] = 'Mary';
+console.log(names);
+
+// Different data types
+
+var john = ['John','Smith',1998,'designer',false];
+
+john.push('blue'); //push adds to the end
+john.unshift('Mr.') //unshift adds to the beggining
+console.log(john);
+
+
+john.pop(); //pop removes from the end
+
+john.shift(); //shift removes from the beggining
+console.log(john);
+
+console.log(john.indexOf(1998));
+
+var isDesigner = john.indexOf('designer') === -1 ? 'John is NOT a designer' : 'John IS a designer';
+console.log(isDesigner);
+
+*/
+
+/****
+* Coding Challenge 3
+***/
+
+/*
+John and his family went on a holiday and went to 3 different restaurants. The bills were $124, $48 and $268.
+
+To tip the watier a fair amount, John created a simple tip calculator (as a function). He likes to tip 20% of the bill when the bill is less than $50, 15% when the bill is between $50 and $200, and 10% if the bill is more than $200.
+
+In the end, John would like to have 2 arrays:
+1) containing all three tips(one for each bill)
+2) containing all three final paid amounts (bill + tip).
+
+(NOTe: to calculate 20% of a value, simply multiply it with .2)
+
+*/
+
+
+function calculateTip(bill){
+    if (bill < 50){
+        return bill * .2;
+    } else if ((bill >= 50) && (bill <= 200)){
+        return bill * .15;
+    } else if (bill > 200){
+        return bill * .5;
+    } else {
+        return bill;
+    }
+}
+
+var billOne = 124;
+var billTwo = 48;
+var billThree = 268;
+var tips = [calculateTip(billOne),calculateTip(billTwo),calculateTip(billThree)];
+var paid = [(calculateTip(billOne)+billOne),(calculateTip(billTwo)+billTwo),(calculateTip(billThree)+billThree)];
+
+console.log(tips);
+console.log(paid);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
