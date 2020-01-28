@@ -8,3 +8,40 @@ GAME RULES:
 - The first player to reach 100 points on GLOBAL score wins the game
 
 */
+
+var scores, roundScore, activePlayer, dice;
+
+
+scores = [0,0];
+roundScore = 0;
+activePlayer = 0;
+
+dice = Math.floor(Math.random() * 6 + 1)
+
+//can only set text with below and not manipulate html
+document.querySelector("#current-" + activePlayer).textContent = dice;
+//below is how you change the html of the webpage using javascript :)
+//document.querySelector('#current-' + activePlayer).innerHTML = '<em>' + dice + '</em>';
+
+var x = document.querySelector('#score-0').textContent;
+console.log(x);
+
+document.querySelector('.dice').style.display = 'none';
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
