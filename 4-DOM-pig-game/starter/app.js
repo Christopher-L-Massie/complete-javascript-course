@@ -11,17 +11,7 @@ GAME RULES:
 
 var scores, roundScore, activePlayer;
 
-
-scores = [0,0];
-roundScore = 0;
-activePlayer = 0;
-
-document.querySelector('.dice').style.display = 'none';
-
-document.getElementById('score-0').textContent = '0';
-document.getElementById('score-1').textContent = '0';
-document.getElementById('current-0').textContent = '0';
-document.getElementById('current-1').textContent = '0';
+init();
 
 document.querySelector('.btn-roll').addEventListener('click', function() {
     
@@ -84,6 +74,29 @@ function nextPlayer() {
     
 }
 
+//do not use function call operator > ()
+//it's not being called until the button is clicked and event listener handles that
+document.querySelector('.btn-new').addEventListener('click', init);
+
+function init(){
+    scores = [0, 0];
+    activePlayer = 0;
+    roundScore = 0;
+    
+    document.querySelector('.dice').style.display = 'none';
+
+    document.getElementById('score-0').textContent = '0';
+    document.getElementById('score-1').textContent = '0';
+    document.getElementById('current-0').textContent = '0';
+    document.getElementById('current-1').textContent = '0';
+    document.getElementById('name-0').textContent = 'Player 1';
+    document.getElementById('name-1').textContent = 'Player 2';
+    document.querySelector('.player-0-panel').classList.remove('winner');
+    document.querySelector('.player-1-panel').classList.remove('winner');
+    document.querySelector('.player-0-panel').classList.remove('active');
+    document.querySelector('.player-1-panel').classList.remove('active');
+    document.querySelector('.player-0-panel').classList.add('active');
+}
 //can only set text with below and not manipulate html
 //document.querySelector("#current-" + activePlayer).textContent = dice;
 //below is how you change the html of the webpage using javascript :)
