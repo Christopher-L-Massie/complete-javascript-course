@@ -136,6 +136,7 @@ console.log(fullAges);
 * Lecture: Functions returning functions
 **********************************/
 
+/*
 function interviewQuestion(job) {
     if (job === 'designer') {
         return function(name){
@@ -161,6 +162,64 @@ designerQuestion('Mark');
 teacherQuestion('Mike');
 
 interviewQuestion('teacher')('Mark');
+*/
+
+/**********
+* Lecture: IIFE (Immediately Invoked Function Expressions)
+**********/
+
+/*
+function game() {
+    var score = Math.random() * 10;
+    console.log(score >= 5);
+}
+game();
+*/
+
+//IIFE
+(function () {
+    var score = Math.random() * 10;
+    console.log(score >= 5);
+})();
+
+//does not work (outside scope)
+//console.log(score);
+
+
+(function (goodLuck) {
+    var score = Math.random() * 10;
+    console.log(score >= 5 - goodLuck);
+})(5);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
